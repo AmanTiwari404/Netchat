@@ -1,8 +1,5 @@
 # NetChat
-
-This application is a simple text based chat application over TCP sockets in Java, with a support for just two people, and with a poorly designed User Interface and a lot of bugs and security issues. The project is divided into two sub-projects, **ChatServer** and **ChatClient**, the **ChatServer** part is the code for running the server and **ChatClient** part is the code for running the client which would communicate with the server.
-
-
+...
 
 ##  Building
 
