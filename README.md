@@ -43,7 +43,3 @@ java -jar ChatClient/dist/ChatClient.jar
 When both are setup, we can use the crappy GUI to chat using the server and client.
 
 
-
-##  License
-
-This project is under [WTFPL License](LICENSE)
