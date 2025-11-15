@@ -16,13 +16,13 @@ This project demonstrates real-time messaging between two or more systems over a
 ## 🖼️ Screenshots
 
 ### Server Chat Window
-![Server Chat](images/server.png)
+![Server Chat](ChatServer/screenshots/server.png)
 
 ### Client Chat Window
-![Client Chat](images/client.png)
+![Client Chat](ChatServer/screenshots/client.png)
 
 ### Both Running Together
-![Both Running](images/both.png)
+![Both Running](ChatServer/screenshots/both.png)
 
 ---
 
