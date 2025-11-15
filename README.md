@@ -1,40 +1,136 @@
 # NetChat
-...
+A simple **Client–Server Chat Application** built using **Java Sockets** and **Swing GUI**.  
+This project demonstrates real-time messaging between two or more systems over a network.
 
-##  Building
+---
 
-####  Requirements
+## 🚀 Features
+- Real-time two-way chatting  
+- Swing-based GUI  
+- Server waits for client connection  
+- Works on **localhost** and **multiple systems (LAN / Wi-Fi)**  
+- Chat saving option  
 
-- JDK 1.7 or above
-- Apache Ant 1.9.16 or above
+---
 
+## 🖼️ Screenshots
 
-This project was made using [Netbeans IDE](https://netbeans.apache.org/) and both the sub-projects can be easily opened, build and explored using Netbeans. But, they can even be built using **ant** by first changing directory into the respective sub-projects and then running,
+### Server Chat Window
+![Server Chat](images/server.png)
 
-```bash
-ant jar
+### Client Chat Window
+![Client Chat](images/client.png)
+
+### Both Running Together
+![Both Running](images/both.png)
+
+---
+
+## 🧠 How This Works
+
+### Server (ChatServer.java)
+- Creates **ServerSocket** on a fixed port  
+- Accepts client connection  
+- Sets up **Input/Output Streams**  
+- Listens and sends messages continuously  
+
+### Client (ChatClient.java)
+- Connects to the server using:
+  - Server IP  
+  - Port  
+  - User Name  
+- Sends and receives messages  
+- Displays chats in GUI  
+
+---
+
+## 🖧 How Two Systems Can Chat?
+
+### 1️⃣ Find IPv4 Address of Server System  
+Open CMD and run:
+
+```cmd
+ipconfig
 ```
 
-After the build is complete, the executable jar file would get created into `dist` directory.
+Copy the **IPv4 Address** (e.g., `192.168.1.10`).
 
+---
 
+### 2️⃣ Run Server  
+Start `ChatServer.java` on **System A**.
 
-##  Running
+It will run on:
 
-Once the jar files are created for each of the sub-projects, we can continue by first running the **ChatServer** which would host our chat over the network.
-
-```bash
-java -jar ChatServer/dist/ChatServer.jar
+```
+Server IP: System A's IPv4 (e.g., 192.168.1.10)
+Port: 1234
 ```
 
-Then, setup the server by providing it with a name and a port number.
+---
 
-Once the server is running, it's time to run the **ChatClient** which would connect to the server over the network on the provided port number and the hostname / ip address of the **ChatServer** instance.
+### 3️⃣ Run Client  
+Start `ChatClient.java` on **System B** and enter:
 
-```bash
-java -jar ChatClient/dist/ChatClient.jar
+```
+Name: yourName
+Server IP: 192.168.1.10
+Port: 1234
 ```
 
-When both are setup, we can use the crappy GUI to chat using the server and client.
+Click **Connect** → Chat begins.
 
+✔️ Both systems must be on the **same Wi-Fi / LAN network**.
 
+---
+
+## 🛠️ Steps to Run the Project
+
+### Clone the Repository
+```bash
+git clone https://github.com/your-username/netchat-java.git
+cd netchat-java
+```
+
+### Run the Server
+```
+src/server/ChatServer.java
+```
+
+### Run the Client
+```
+src/client/ChatClient.java
+```
+
+---
+
+## 📂 Folder Structure
+```
+netchat-java/
+│── src/
+│   ├── client/
+│   │   └── ChatClient.java
+│   ├── server/
+│   │   └── ChatServer.java
+│── resources/
+│── Client.form
+│── build.xml
+│── manifest.mf
+│── README.md
+│── images/
+│       ├── server.png
+│       ├── client.png
+│       └── both.png
+```
+
+---
+
+## 📌 Technologies Used
+- Java 8+  
+- Java Networking (Socket, ServerSocket)  
+- Swing GUI  
+
+---
+
+## 🤝 Contributing
+Pull requests are welcome.
